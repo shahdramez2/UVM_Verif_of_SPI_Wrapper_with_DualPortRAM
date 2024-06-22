@@ -1,0 +1,355 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT /RAM_sva_inst
+=== Design Unit: work.RAM_sva
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /RAM_sva_inst/a_rst_dout
+                     RAM_sva.sv(8)                      0          1
+/\top#DUT /RAM_sva_inst/a_rst_tx_valid
+                     RAM_sva.sv(9)                      0          1
+/\top#DUT /RAM_sva_inst/a_tx_valid_pr
+                     RAM_sva.sv(18)                     0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT /RAM_sva_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File RAM_sva.sv
+------------------------------------IF Branch------------------------------------
+    7                                       4106     Count coming in to IF
+    7               1                         95     	if(!R_if.rst_n) begin
+                                            4011     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+
+Directive Coverage:
+    Directives                       1         1         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /RAM_sva_inst/c_tx_valid_pr    RAM_sva Verilog  SVA  RAM_sva.sv(19)  2056 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT /RAM_sva_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File RAM_sva.sv
+    1                                                module RAM_sva(RAM_if.DUT R_if);
+    2                                                
+    3                                                typedef enum bit [1:0] {WRITE_ADDR = 2'b00, WRITE_DATA = 2'b01, READ_ADDR = 2'b10, READ_DATA = 2'b11} ram_e;
+    4                                                
+    5               1                       4106     always_comb begin
+
+
+=================================================================================
+=== Instance: /\top#DUT 
+=== Design Unit: work.Dual_port_RAM
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      12        12         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /a_rst_dout
+                     Dual_port_RAM.sv(59)               0          1
+/\top#DUT /a_rst_txvalid
+                     Dual_port_RAM.sv(60)               0          1
+/\top#DUT /a_write_adr_pr
+                     Dual_port_RAM.sv(68)               0          1
+/\top#DUT /a_write_data_pr
+                     Dual_port_RAM.sv(75)               0          1
+/\top#DUT /a_read_adr_pr
+                     Dual_port_RAM.sv(82)               0          1
+/\top#DUT /a_read_data_pr
+                     Dual_port_RAM.sv(89)               0          1
+/\top#DUT /a_high_tx_valid_pr
+                     Dual_port_RAM.sv(96)               0          1
+/\top#DUT /a_low_tx_valid_pr
+                     Dual_port_RAM.sv(103)              0          1
+/\top#DUT /a_low_rxvalid_stable_writeaddr_pr
+                     Dual_port_RAM.sv(110)              0          1
+/\top#DUT /a_low_rxvalid_stable_readaddr_pr
+                     Dual_port_RAM.sv(117)              0          1
+/\top#DUT /a_low_rxvalid_stable_dout_pr
+                     Dual_port_RAM.sv(124)              0          1
+/\top#DUT /a_low_rxvalid_low_txvalid_pr
+                     Dual_port_RAM.sv(131)              0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        14        14         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File Dual_port_RAM.sv
+------------------------------------IF Branch------------------------------------
+    13                                      9073     Count coming in to IF
+    13              1                        147     	if (~rst_n) begin
+    23              1                       8926     	else begin			
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    24                                      8926     Count coming in to IF
+    24              1                       8058     		if(rx_valid==1)begin
+    47              1                        868     		else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    25                                      8058     Count coming in to IF
+    25              1                       3997     			if(din[9]==0)begin
+                                            4061     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    26                                      3997     Count coming in to IF
+    26              1                       1982     				if(din[8]==0)begin
+    30              1                       2015     				else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    36                                      8058     Count coming in to IF
+    36              1                       4061     			if(din[9]==1)begin
+                                            3997     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    37                                      4061     Count coming in to IF
+    37              1                       1988     				if (din[8]==0) begin
+    41              1                       2073     				else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                      4015     Count coming in to IF
+    58              1                         76     		if (!rst_n) begin
+                                            3939     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+
+Directive Coverage:
+    Directives                      10        10         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /c_write_adr_pr                Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(69)
+                                                                              1963 Covered   
+/\top#DUT /c_write_data_pr               Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(76)
+                                                                              2002 Covered   
+/\top#DUT /c_read_adr_pr                 Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(83)
+                                                                              1972 Covered   
+/\top#DUT /c_read_data_pr                Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(90)
+                                                                              2056 Covered   
+/\top#DUT /c_high_tx_valid_pr            Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(97)
+                                                                              2056 Covered   
+/\top#DUT /c_low_tx_valid_pr             Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(104)
+                                                                              5937 Covered   
+/\top#DUT /c_low_rxvalid_stable_writeaddr_pr 
+                                         Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(111)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_stable_readaddr_pr 
+                                         Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(118)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_stable_dout_pr  Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(125)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_low_txvalid_pr  Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(132)
+                                                                               861 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      18        18         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File Dual_port_RAM.sv
+    1                                                module Dual_port_RAM(din, clk ,rst_n, rx_valid , tx_valid, dout);
+    2                                                
+    3                                                parameter MEM_DEPTH=256;
+    4                                                parameter ADDR_SIZE=8;
+    5                                                input clk, rst_n, rx_valid;
+    6                                                input [9:0] din;
+    7                                                output  reg tx_valid;
+    8                                                output reg [ADDR_SIZE-1:0] dout; 
+    9                                                
+    10                                               reg [ADDR_SIZE-1:0] mem [MEM_DEPTH-1:0];
+    11                                               reg [ADDR_SIZE-1:0] write_addr,read_addr;
+    12              1                       9073     always @(posedge clk or negedge rst_n) begin
+    13                                               	if (~rst_n) begin
+    14              1                        147     		dout<=8'b0000_0000;
+    15              1                        147     		tx_valid=0;
+    16              1                        147     		write_addr <= 0;
+    17              1                        147     		read_addr  <= 0;
+    18                                               		
+    19              1                        147     		for (int i = 0; i< MEM_DEPTH; i=i+1) begin
+    19              2                      37632     
+    20              1                      37632     			mem [i] <= 0;
+    21                                               		end
+    22                                               	end
+    23                                               	else begin			
+    24                                               		if(rx_valid==1)begin
+    25                                               			if(din[9]==0)begin
+    26                                               				if(din[8]==0)begin
+    27              1                       1982     					write_addr<=din[7:0];           
+    28              1                       1982     					tx_valid<=0;
+    29                                               				end
+    30                                               				else begin
+    31              1                       2015     					mem[write_addr]<=din[7:0];          
+    32              1                       2015     					tx_valid<=0;
+    33                                               				end
+    34                                               			end
+    35                                               
+    36                                               			if(din[9]==1)begin
+    37                                               				if (din[8]==0) begin
+    38              1                       1988     					read_addr<= din[7:0];
+    39              1                       1988     					tx_valid<=0;
+    40                                               				end
+    41                                               				else begin
+    42              1                       2073     					dout[7:0]<= mem[read_addr];
+    43              1                       2073     					tx_valid<=1;
+    44                                               				end
+    45                                               			end
+    46                                               		end
+    47                                               		else begin
+    48              1                        868     			tx_valid <= 0;
+    49                                               		end
+    50                                               	end		 	
+    51                                               end
+    52                                               
+    53                                               
+    54                                               
+    55                                               `ifdef SIM
+    56                                               	//RAM_1
+    57              1                       4015     	always_comb begin
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         76        76         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+                                          din[0-9]           1           1      100.00 
+                                         dout[7-0]           1           1      100.00 
+                                    read_addr[7-0]           1           1      100.00 
+                                             rst_n           1           1      100.00 
+                                          rx_valid           1           1      100.00 
+                                          tx_valid           1           1      100.00 
+                                   write_addr[7-0]           1           1      100.00 
+
+Total Node Count     =         38 
+Toggled Node Count   =         38 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (76 of 76 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /c_write_adr_pr                Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(69)
+                                                                              1963 Covered   
+/\top#DUT /c_write_data_pr               Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(76)
+                                                                              2002 Covered   
+/\top#DUT /c_read_adr_pr                 Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(83)
+                                                                              1972 Covered   
+/\top#DUT /c_read_data_pr                Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(90)
+                                                                              2056 Covered   
+/\top#DUT /c_high_tx_valid_pr            Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(97)
+                                                                              2056 Covered   
+/\top#DUT /c_low_tx_valid_pr             Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(104)
+                                                                              5937 Covered   
+/\top#DUT /c_low_rxvalid_stable_writeaddr_pr 
+                                         Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(111)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_stable_readaddr_pr 
+                                         Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(118)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_stable_dout_pr  Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(125)
+                                                                               861 Covered   
+/\top#DUT /c_low_rxvalid_low_txvalid_pr  Dual_port_RAM Verilog  SVA  Dual_port_RAM.sv(132)
+                                                                               861 Covered   
+/\top#DUT /RAM_sva_inst/c_tx_valid_pr    RAM_sva Verilog  SVA  RAM_sva.sv(19)  2056 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 11
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /a_rst_dout
+                     Dual_port_RAM.sv(59)               0          1
+/\top#DUT /a_rst_txvalid
+                     Dual_port_RAM.sv(60)               0          1
+/\top#DUT /a_write_adr_pr
+                     Dual_port_RAM.sv(68)               0          1
+/\top#DUT /a_write_data_pr
+                     Dual_port_RAM.sv(75)               0          1
+/\top#DUT /a_read_adr_pr
+                     Dual_port_RAM.sv(82)               0          1
+/\top#DUT /a_read_data_pr
+                     Dual_port_RAM.sv(89)               0          1
+/\top#DUT /a_high_tx_valid_pr
+                     Dual_port_RAM.sv(96)               0          1
+/\top#DUT /a_low_tx_valid_pr
+                     Dual_port_RAM.sv(103)              0          1
+/\top#DUT /a_low_rxvalid_stable_writeaddr_pr
+                     Dual_port_RAM.sv(110)              0          1
+/\top#DUT /a_low_rxvalid_stable_readaddr_pr
+                     Dual_port_RAM.sv(117)              0          1
+/\top#DUT /a_low_rxvalid_stable_dout_pr
+                     Dual_port_RAM.sv(124)              0          1
+/\top#DUT /a_low_rxvalid_low_txvalid_pr
+                     Dual_port_RAM.sv(131)              0          1
+/\top#DUT /RAM_sva_inst/a_rst_dout
+                     RAM_sva.sv(8)                      0          1
+/\top#DUT /RAM_sva_inst/a_rst_tx_valid
+                     RAM_sva.sv(9)                      0          1
+/\top#DUT /RAM_sva_inst/a_tx_valid_pr
+                     RAM_sva.sv(18)                     0          1
+
+Total Coverage By Instance (filtered view): 100.00%
+
